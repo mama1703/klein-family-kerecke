@@ -1,4 +1,4 @@
-import { Link } from "@tanstack/react-router";
+import { Link } from "react-router-dom";
 import { useState } from "react";
 import { ChevronDown, List } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
@@ -19,7 +19,6 @@ export function ChapterSidebar({ chapters, currentChapterId }: ChapterSidebarPro
 
   return (
     <>
-      {/* Desktop sidebar */}
       <aside className="hidden lg:block w-64 shrink-0">
         <div className="sticky top-24">
           <h3 className="font-heading text-sm font-semibold text-muted-foreground mb-3">פרקים</h3>
@@ -41,7 +40,6 @@ export function ChapterSidebar({ chapters, currentChapterId }: ChapterSidebarPro
         </div>
       </aside>
 
-      {/* Mobile chapter selector */}
       <div className="lg:hidden mb-6">
         <button
           onClick={() => setMobileOpen(!mobileOpen)}
