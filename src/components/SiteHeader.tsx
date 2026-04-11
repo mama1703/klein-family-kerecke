@@ -1,15 +1,15 @@
-import { Link } from "@tanstack/react-router";
+import { Link, NavLink } from "react-router-dom";
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
 const navItems = [
-  { to: "/" as const, label: "דף הבית" },
-  { to: "/story-haim" as const, label: "הסיפור של חיים" },
-  { to: "/story-hershi" as const, label: "הסיפור של הרשי" },
-  { to: "/story-hadva" as const, label: "הסיפור של חדווה" },
-  { to: "/story-avi" as const, label: "הסיפור של אווי" },
-  { to: "/articles" as const, label: "חיים מאמרים" },
+  { to: "/", label: "דף הבית" },
+  { to: "/story-haim", label: "הסיפור של חיים" },
+  { to: "/story-hershi", label: "הסיפור של הרשי" },
+  { to: "/story-hadva", label: "הסיפור של חדווה" },
+  { to: "/story-avi", label: "הסיפור של אווי" },
+  { to: "/articles", label: "חיים מאמרים" },
 ];
 
 export function SiteHeader() {
@@ -23,22 +23,25 @@ export function SiteHeader() {
             ספר המשפחה
           </Link>
 
-          {/* Desktop nav */}
           <nav className="hidden md:flex items-center gap-1">
             {navItems.map((item) => (
-              <Link
+              <NavLink
                 key={item.to}
                 to={item.to}
-                className="px-3 py-2 text-sm font-medium text-muted-foreground hover:text-foreground transition-colors rounded-md hover:bg-accent"
-                activeProps={{ className: "px-3 py-2 text-sm font-medium text-foreground bg-accent rounded-md" }}
-                activeOptions={{ exact: item.to === "/" }}
+                end={item.to === "/"}
+                className={({ isActive }) =>
+                  `px-3 py-2 text-sm font-medium rounded-md transition-colors ${
+                    isActive
+                      ? "text-foreground bg-accent"
+                      : "text-muted-foreground hover:text-foreground hover:bg-accent"
+                  }`
+                }
               >
                 {item.label}
-              </Link>
+              </NavLink>
             ))}
           </nav>
 
-          {/* Mobile toggle */}
           <button
             onClick={() => setMobileOpen(!mobileOpen)}
             className="md:hidden p-2 text-muted-foreground hover:text-foreground transition-colors"
@@ -49,7 +52,6 @@ export function SiteHeader() {
         </div>
       </div>
 
-      {/* Mobile menu */}
       <AnimatePresence>
         {mobileOpen && (
           <motion.nav
@@ -61,16 +63,21 @@ export function SiteHeader() {
           >
             <div className="px-4 py-3 space-y-1">
               {navItems.map((item) => (
-                <Link
+                <NavLink
                   key={item.to}
                   to={item.to}
+                  end={item.to === "/"}
                   onClick={() => setMobileOpen(false)}
-                  className="block px-3 py-2.5 text-sm font-medium text-muted-foreground hover:text-foreground hover:bg-accent rounded-md transition-colors"
-                  activeProps={{ className: "block px-3 py-2.5 text-sm font-medium text-foreground bg-accent rounded-md" }}
-                  activeOptions={{ exact: item.to === "/" }}
+                  className={({ isActive }) =>
+                    `block px-3 py-2.5 text-sm font-medium rounded-md transition-colors ${
+                      isActive
+                        ? "text-foreground bg-accent"
+                        : "text-muted-foreground hover:text-foreground hover:bg-accent"
+                    }`
+                  }
                 >
                   {item.label}
-                </Link>
+                </NavLink>
               ))}
             </div>
           </motion.nav>

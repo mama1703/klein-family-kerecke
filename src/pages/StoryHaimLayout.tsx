@@ -1,18 +1,6 @@
-import { createFileRoute, Outlet } from "@tanstack/react-router";
+import { Outlet } from "react-router-dom";
 import { PageHeader } from "../components/PageHeader";
 import { ChapterSidebar, type Chapter } from "../components/ChapterSidebar";
-
-export const Route = createFileRoute("/story-haim")({
-  head: () => ({
-    meta: [
-      { title: "הסיפור של חיים — ספר המשפחה" },
-      { name: "description", content: "סיפור חייו של חיים, פרק אחר פרק" },
-      { property: "og:title", content: "הסיפור של חיים — ספר המשפחה" },
-      { property: "og:description", content: "סיפור חייו של חיים, פרק אחר פרק" },
-    ],
-  }),
-  component: StoryHaimLayout,
-});
 
 const chapters: Chapter[] = [
   { id: "intro", title: "הקדמה", to: "/story-haim" },
@@ -21,7 +9,7 @@ const chapters: Chapter[] = [
   { id: "chapter-3", title: "פרק ג׳ — חיים חדשים", to: "/story-haim/chapter-3" },
 ];
 
-function StoryHaimLayout() {
+export default function StoryHaimLayout() {
   return (
     <div>
       <PageHeader
