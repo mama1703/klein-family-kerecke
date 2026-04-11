@@ -9,38 +9,188 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as StoryHershiRouteImport } from './routes/story-hershi'
+import { Route as StoryHaimRouteImport } from './routes/story-haim'
+import { Route as StoryHadvaRouteImport } from './routes/story-hadva'
+import { Route as StoryAviRouteImport } from './routes/story-avi'
+import { Route as ArticlesRouteImport } from './routes/articles'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as StoryHaimIndexRouteImport } from './routes/story-haim/index'
+import { Route as StoryHaimChapter3RouteImport } from './routes/story-haim/chapter-3'
+import { Route as StoryHaimChapter2RouteImport } from './routes/story-haim/chapter-2'
+import { Route as StoryHaimChapter1RouteImport } from './routes/story-haim/chapter-1'
 
+const StoryHershiRoute = StoryHershiRouteImport.update({
+  id: '/story-hershi',
+  path: '/story-hershi',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const StoryHaimRoute = StoryHaimRouteImport.update({
+  id: '/story-haim',
+  path: '/story-haim',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const StoryHadvaRoute = StoryHadvaRouteImport.update({
+  id: '/story-hadva',
+  path: '/story-hadva',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const StoryAviRoute = StoryAviRouteImport.update({
+  id: '/story-avi',
+  path: '/story-avi',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ArticlesRoute = ArticlesRouteImport.update({
+  id: '/articles',
+  path: '/articles',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const StoryHaimIndexRoute = StoryHaimIndexRouteImport.update({
+  id: '/',
+  path: '/',
+  getParentRoute: () => StoryHaimRoute,
+} as any)
+const StoryHaimChapter3Route = StoryHaimChapter3RouteImport.update({
+  id: '/chapter-3',
+  path: '/chapter-3',
+  getParentRoute: () => StoryHaimRoute,
+} as any)
+const StoryHaimChapter2Route = StoryHaimChapter2RouteImport.update({
+  id: '/chapter-2',
+  path: '/chapter-2',
+  getParentRoute: () => StoryHaimRoute,
+} as any)
+const StoryHaimChapter1Route = StoryHaimChapter1RouteImport.update({
+  id: '/chapter-1',
+  path: '/chapter-1',
+  getParentRoute: () => StoryHaimRoute,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/articles': typeof ArticlesRoute
+  '/story-avi': typeof StoryAviRoute
+  '/story-hadva': typeof StoryHadvaRoute
+  '/story-haim': typeof StoryHaimRouteWithChildren
+  '/story-hershi': typeof StoryHershiRoute
+  '/story-haim/chapter-1': typeof StoryHaimChapter1Route
+  '/story-haim/chapter-2': typeof StoryHaimChapter2Route
+  '/story-haim/chapter-3': typeof StoryHaimChapter3Route
+  '/story-haim/': typeof StoryHaimIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/articles': typeof ArticlesRoute
+  '/story-avi': typeof StoryAviRoute
+  '/story-hadva': typeof StoryHadvaRoute
+  '/story-hershi': typeof StoryHershiRoute
+  '/story-haim/chapter-1': typeof StoryHaimChapter1Route
+  '/story-haim/chapter-2': typeof StoryHaimChapter2Route
+  '/story-haim/chapter-3': typeof StoryHaimChapter3Route
+  '/story-haim': typeof StoryHaimIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/articles': typeof ArticlesRoute
+  '/story-avi': typeof StoryAviRoute
+  '/story-hadva': typeof StoryHadvaRoute
+  '/story-haim': typeof StoryHaimRouteWithChildren
+  '/story-hershi': typeof StoryHershiRoute
+  '/story-haim/chapter-1': typeof StoryHaimChapter1Route
+  '/story-haim/chapter-2': typeof StoryHaimChapter2Route
+  '/story-haim/chapter-3': typeof StoryHaimChapter3Route
+  '/story-haim/': typeof StoryHaimIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths:
+    | '/'
+    | '/articles'
+    | '/story-avi'
+    | '/story-hadva'
+    | '/story-haim'
+    | '/story-hershi'
+    | '/story-haim/chapter-1'
+    | '/story-haim/chapter-2'
+    | '/story-haim/chapter-3'
+    | '/story-haim/'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to:
+    | '/'
+    | '/articles'
+    | '/story-avi'
+    | '/story-hadva'
+    | '/story-hershi'
+    | '/story-haim/chapter-1'
+    | '/story-haim/chapter-2'
+    | '/story-haim/chapter-3'
+    | '/story-haim'
+  id:
+    | '__root__'
+    | '/'
+    | '/articles'
+    | '/story-avi'
+    | '/story-hadva'
+    | '/story-haim'
+    | '/story-hershi'
+    | '/story-haim/chapter-1'
+    | '/story-haim/chapter-2'
+    | '/story-haim/chapter-3'
+    | '/story-haim/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  ArticlesRoute: typeof ArticlesRoute
+  StoryAviRoute: typeof StoryAviRoute
+  StoryHadvaRoute: typeof StoryHadvaRoute
+  StoryHaimRoute: typeof StoryHaimRouteWithChildren
+  StoryHershiRoute: typeof StoryHershiRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/story-hershi': {
+      id: '/story-hershi'
+      path: '/story-hershi'
+      fullPath: '/story-hershi'
+      preLoaderRoute: typeof StoryHershiRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/story-haim': {
+      id: '/story-haim'
+      path: '/story-haim'
+      fullPath: '/story-haim'
+      preLoaderRoute: typeof StoryHaimRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/story-hadva': {
+      id: '/story-hadva'
+      path: '/story-hadva'
+      fullPath: '/story-hadva'
+      preLoaderRoute: typeof StoryHadvaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/story-avi': {
+      id: '/story-avi'
+      path: '/story-avi'
+      fullPath: '/story-avi'
+      preLoaderRoute: typeof StoryAviRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/articles': {
+      id: '/articles'
+      path: '/articles'
+      fullPath: '/articles'
+      preLoaderRoute: typeof ArticlesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/': {
       id: '/'
       path: '/'
@@ -48,11 +198,62 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/story-haim/': {
+      id: '/story-haim/'
+      path: '/'
+      fullPath: '/story-haim/'
+      preLoaderRoute: typeof StoryHaimIndexRouteImport
+      parentRoute: typeof StoryHaimRoute
+    }
+    '/story-haim/chapter-3': {
+      id: '/story-haim/chapter-3'
+      path: '/chapter-3'
+      fullPath: '/story-haim/chapter-3'
+      preLoaderRoute: typeof StoryHaimChapter3RouteImport
+      parentRoute: typeof StoryHaimRoute
+    }
+    '/story-haim/chapter-2': {
+      id: '/story-haim/chapter-2'
+      path: '/chapter-2'
+      fullPath: '/story-haim/chapter-2'
+      preLoaderRoute: typeof StoryHaimChapter2RouteImport
+      parentRoute: typeof StoryHaimRoute
+    }
+    '/story-haim/chapter-1': {
+      id: '/story-haim/chapter-1'
+      path: '/chapter-1'
+      fullPath: '/story-haim/chapter-1'
+      preLoaderRoute: typeof StoryHaimChapter1RouteImport
+      parentRoute: typeof StoryHaimRoute
+    }
   }
 }
 
+interface StoryHaimRouteChildren {
+  StoryHaimChapter1Route: typeof StoryHaimChapter1Route
+  StoryHaimChapter2Route: typeof StoryHaimChapter2Route
+  StoryHaimChapter3Route: typeof StoryHaimChapter3Route
+  StoryHaimIndexRoute: typeof StoryHaimIndexRoute
+}
+
+const StoryHaimRouteChildren: StoryHaimRouteChildren = {
+  StoryHaimChapter1Route: StoryHaimChapter1Route,
+  StoryHaimChapter2Route: StoryHaimChapter2Route,
+  StoryHaimChapter3Route: StoryHaimChapter3Route,
+  StoryHaimIndexRoute: StoryHaimIndexRoute,
+}
+
+const StoryHaimRouteWithChildren = StoryHaimRoute._addFileChildren(
+  StoryHaimRouteChildren,
+)
+
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  ArticlesRoute: ArticlesRoute,
+  StoryAviRoute: StoryAviRoute,
+  StoryHadvaRoute: StoryHadvaRoute,
+  StoryHaimRoute: StoryHaimRouteWithChildren,
+  StoryHershiRoute: StoryHershiRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
