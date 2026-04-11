@@ -26,8 +26,16 @@ export const Route = createRootRoute({
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "ספר המשפחה" },
+      { title: "Klein Family - Kerecke" },
       { name: "description", content: "ספר משפחה דיגיטלי – סיפורים, זיכרונות ועדויות" },
+      { property: "og:title", content: "Klein Family - Kerecke" },
+      { name: "twitter:title", content: "Klein Family - Kerecke" },
+      { property: "og:description", content: "ספר משפחה דיגיטלי – סיפורים, זיכרונות ועדויות" },
+      { name: "twitter:description", content: "ספר משפחה דיגיטלי – סיפורים, זיכרונות ועדויות" },
+      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/d9b1c585-58c6-4652-85fe-6bdd7e4e7644/id-preview-55e544ee--672628e8-b54d-46cf-9199-305bd505f537.lovable.app-1775933582367.png" },
+      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/d9b1c585-58c6-4652-85fe-6bdd7e4e7644/id-preview-55e544ee--672628e8-b54d-46cf-9199-305bd505f537.lovable.app-1775933582367.png" },
+      { name: "twitter:card", content: "summary_large_image" },
+      { property: "og:type", content: "website" },
     ],
     links: [
       { rel: "stylesheet", href: appCss },
