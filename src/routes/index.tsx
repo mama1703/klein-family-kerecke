@@ -62,23 +62,54 @@ function HomePage() {
           >
             ספר המשפחה
           </motion.h1>
+
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.2, duration: 0.6 }}
             className="w-16 h-0.5 bg-primary mx-auto mt-6"
           />
+
           <motion.p
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3, duration: 0.6 }}
             className="mt-6 text-lg sm:text-xl text-muted-foreground leading-relaxed max-w-2xl mx-auto"
           >
-            סיפורים, זיכרונות ועדויות של המשפחה שלנו.
-            <br />
-            כל פרק הוא חלון לעולם שהיה, לאנשים שאהבנו ולרגעים שעיצבו אותנו.
+            ספר המשפחה שלנו – סיפורים, זיכרונות ועדויות.
           </motion.p>
         </div>
+      </section>
+
+      {/* Introduction */}
+      <section className="max-w-3xl mx-auto px-4 sm:px-6 py-12 text-right leading-relaxed">
+        <p className="mb-4">
+          באתר זה, תוכלו למצוא את עזבונו של סבי, לצד עדויות וסיפורים של בני המשפחה.
+        </p>
+
+        <p className="mb-4">
+          בחלק הראשון, העליתי את ספרו של סבי, חיים אלטר קליין, שנולד בשנת 1923.
+          הספר יצא לאור בשנת 1993, בהיותו בן 70.
+          סבי ז"ל נפטר ב-17.02.2016, בהיותו בן 93 שנה.
+        </p>
+
+        <p className="mb-4">
+          בספר ניתן לקרוא גם שני פרקים נוספים שהוא אסף כעדות מאימו הגדולה
+          ובמאורעות הצעירה, ששודרו יחד עמו ועלו ארצה.
+        </p>
+
+        <p className="mb-4">
+          בחלק השני, העליתי את עדותה המצולמת של סבתי האהובה, רחל (אווי) קליין,
+          שנולדה בשנת 1928 ונפטרה ב-2023, בשיבה טובה, בהיותה בת 94.
+        </p>
+
+        <p className="mb-4">
+          ניתן לראות פה את אתר ההנצחה שהוקם לזכרם.
+        </p>
+
+        <p className="mt-6 font-semibold">
+          יפעת דניאלי
+        </p>
       </section>
 
       {/* Chapter cards */}
