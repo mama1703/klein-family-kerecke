@@ -4,8 +4,6 @@ import tsconfigPaths from "vite-tsconfig-paths";
 import tailwindcss from "@tailwindcss/vite";
 
 export default defineConfig({
+  base: "/klein-family-kerecke/",
   plugins: [react(), tsconfigPaths(), tailwindcss()],
-  build: {
-    outDir: "dist",
-  },
 });
