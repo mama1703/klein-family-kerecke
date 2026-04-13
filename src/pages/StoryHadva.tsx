@@ -1,4 +1,5 @@
 import { PageHeader } from "../components/PageHeader";
+import { ImageBlock } from "../components/ImageBlock";
 
 export default function StoryHadva() {
   return (
