@@ -1,3 +1,4 @@
+  import { ImageBlock } from "../components/ImageBlock";
 export default function Chapter3() {
   return (
     <div className="prose-hebrew">
@@ -179,16 +180,13 @@ export default function Chapter3() {
         ארי היה צעיר ממני, אבל בחיידר למדנו יחד. ידוע לי שהוא חי בארצות הברית.
       </p>
 
-      <div className="my-12 text-center">
-        <img
-          src="/klein-family-kerecke/images/kinds-haider.png"
-          alt="חלק מילדי קרצקי שהלכו איתי לחיידר"
-          className="mx-auto max-w-md rounded-2xl shadow-md"
-        />
-        <p className="mt-3 text-sm text-stone-500">
-          חלק מילדי קרצקי שהלכו איתי לחיידר
-        </p>
-      </div>
+   
+
+<ImageBlock
+  src="/klein-family-kerecke/images/kinds-haider.png"
+  alt="חלק מילדי קרצקי שהלכו איתי לחיידר"
+  caption="חלק מילדי קרצקי שהלכו איתי לחיידר"
+/>
     </div>
   );
 }
