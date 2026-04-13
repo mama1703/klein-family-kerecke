@@ -5,6 +5,7 @@ import StoryHaimIndex from "./StoryHaimIndex";
 import Chapter1 from "./Chapter1";
 import Chapter2 from "./Chapter2";
 import Chapter3 from "./Chapter3";
+import Chapter4 from "./Chapter4";
 
 export type StoryHaimChapterRoute = Chapter & {
   index?: boolean;
@@ -40,5 +41,12 @@ export const storyHaimChapters: StoryHaimChapterRoute[] = [
     to: "/story-haim/chapter-3",
     routePath: "chapter-3",
     element: Chapter3,
+  },
+  {
+    id: "chapter-4",
+    title: "פרק ד׳ — תנועת הנוער הציוני בבודפשט בימי שלטון הנאצים",
+    to: "/story-haim/chapter-4",
+    routePath: "chapter-4",
+    element: Chapter4,
   },
 ];
