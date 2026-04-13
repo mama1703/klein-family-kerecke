@@ -218,10 +218,10 @@ export default function Chapter2() {
         היה ברור מה תהיה דרכי אחרי שחרורי מזוועות הגרמנים - לעלות לארץ-ישראל.
       </p>
 
-    <div className="my-12">
+  <div className="my-12">
   <div className="overflow-hidden rounded-2xl border border-stone-200 shadow-sm">
     <img
-      src={`${import.meta.env.BASE_URL}images/parents.png`}
+      src="/klein-family-kerecke/images/parents.png"
       alt='הורי ז"ל - אברהם יעקב ופרל (פאולה) קליין'
       className="w-full object-cover"
     />
@@ -232,9 +232,7 @@ export default function Chapter2() {
   </p>
 </div>
 
-      <p className="font-semibold mt-8">
-        הורי ז&quot;ל - אברהם יעקב ופרל (פאולה) קליין
-      </p>
+     
 
       <h3 className="text-2xl font-bold mt-14 mb-6">מפגשים באושוויץ, בפתח מכרה הפחם</h3>
 
