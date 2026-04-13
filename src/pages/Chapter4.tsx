@@ -1,4 +1,4 @@
-export default function Chapter3() {
+export default function Chapter4() {
   return (
     <div className="prose-hebrew">
       <h2 className="text-4xl font-bold mb-10 text-center">פרק ד' - תנועת הנוער הציוני בבודפשט בימי שלטון הנאצים</h2>
