@@ -1,5 +1,5 @@
-import { Link, useLocation } from "react-router-dom";
-import { useMemo, useState } from "react";
+import { NavLink } from "react-router-dom";
+import { useState } from "react";
 import { ChevronDown, List } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
@@ -11,29 +11,10 @@ export interface Chapter {
 
 interface ChapterSidebarProps {
   chapters: Chapter[];
-  currentChapterId?: string;
 }
 
-export function ChapterSidebar({
-  chapters,
-  currentChapterId,
-}: ChapterSidebarProps) {
+export function ChapterSidebar({ chapters }: ChapterSidebarProps) {
   const [mobileOpen, setMobileOpen] = useState(false);
-  const location = useLocation();
-
-  const activeChapterId = useMemo(() => {
-    if (currentChapterId) return currentChapterId;
-
-    const matchedChapter = chapters.find((ch) => {
-      const normalizedPath = location.pathname.replace(/\/+$/, "");
-      const normalizedTo = ch.to.replace(/\/+$/, "");
-      return normalizedPath === normalizedTo;
-    });
-
-    return matchedChapter?.id;
-  }, [currentChapterId, chapters, location.pathname]);
-
-  const activeChapter = chapters.find((ch) => ch.id === activeChapterId);
 
   return (
     <>
@@ -44,24 +25,22 @@ export function ChapterSidebar({
           </h3>
 
           <nav className="space-y-0.5">
-            {chapters.map((ch) => {
-              const isActive = activeChapterId === ch.id;
-
-              return (
-                <Link
-                  key={ch.id}
-                  to={ch.to}
-                  className={`block px-3 py-2 text-sm rounded-md transition-colors ${
+            {chapters.map((ch) => (
+              <NavLink
+                key={ch.id}
+                to={ch.to}
+                end
+                className={({ isActive }) =>
+                  `block px-3 py-2 text-sm rounded-md transition-colors ${
                     isActive
                       ? "bg-accent text-foreground font-medium"
                       : "text-muted-foreground hover:text-foreground hover:bg-accent/50"
-                  }`}
-                  aria-current={isActive ? "page" : undefined}
-                >
-                  {ch.title}
-                </Link>
-              );
-            })}
+                  }`
+                }
+              >
+                {ch.title}
+              </NavLink>
+            ))}
           </nav>
         </div>
       </aside>
@@ -71,11 +50,10 @@ export function ChapterSidebar({
           onClick={() => setMobileOpen((prev) => !prev)}
           className="w-full flex items-center justify-between px-4 py-3 bg-card border border-border rounded-lg text-sm font-medium"
           aria-expanded={mobileOpen}
-          aria-label="פתחי תפריט פרקים"
         >
           <span className="flex items-center gap-2">
             <List size={16} />
-            <span>{activeChapter?.title || "פרקים"}</span>
+            <span>פרקים</span>
           </span>
 
           <ChevronDown
@@ -94,25 +72,23 @@ export function ChapterSidebar({
               className="overflow-hidden border border-t-0 border-border rounded-b-lg bg-card"
             >
               <div className="p-2 space-y-0.5">
-                {chapters.map((ch) => {
-                  const isActive = activeChapterId === ch.id;
-
-                  return (
-                    <Link
-                      key={ch.id}
-                      to={ch.to}
-                      onClick={() => setMobileOpen(false)}
-                      className={`block px-3 py-2 text-sm rounded-md transition-colors ${
+                {chapters.map((ch) => (
+                  <NavLink
+                    key={ch.id}
+                    to={ch.to}
+                    end
+                    onClick={() => setMobileOpen(false)}
+                    className={({ isActive }) =>
+                      `block px-3 py-2 text-sm rounded-md transition-colors ${
                         isActive
                           ? "bg-accent text-foreground font-medium"
                           : "text-muted-foreground hover:text-foreground hover:bg-accent/50"
-                      }`}
-                      aria-current={isActive ? "page" : undefined}
-                    >
-                      {ch.title}
-                    </Link>
-                  );
-                })}
+                      }`
+                    }
+                  >
+                    {ch.title}
+                  </NavLink>
+                ))}
               </div>
             </motion.nav>
           )}
