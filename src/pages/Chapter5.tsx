@@ -1,3 +1,5 @@
+import { ImageBlock } from "../components/ImageBlock";
+
 export default function Chapter5() {
   return (
     <div className="prose-hebrew">
@@ -179,7 +181,13 @@ export default function Chapter5() {
         הגזירה, בכך שסגרו את הכניסות הימיות ועצרו את האוניות בדרכם לארץ.
       </p>
 
-      <p>חיים קליין מימין - בוקרשט, רומניה</p>
+       {/* תמונה */}
+      <ImageBlock
+        src="/klein-family-kerecke/images/romania.png"
+        alt="בוקרשט, רומניה"
+        caption="חיים קליין מימין - בוקרשט, רומניה"
+      />
+
     </div>
   );
 }
