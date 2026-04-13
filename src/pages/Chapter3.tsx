@@ -180,9 +180,23 @@ export default function Chapter3() {
         ארי היה צעיר ממני, אבל בחיידר למדנו יחד. ידוע לי שהוא חי בארצות הברית.
       </p>
 
-      <h3 className="text-2xl font-bold mt-14 mb-6">חתימה</h3>
+   <div className="my-12">
+<div className="overflow-hidden rounded-2xl border border-stone-200 shadow-sm">
+<img
+src="/klein-family-kerecke/images/kinds-haider.png"
+alt='חלק מילדי קרצקי שהכלו  איתי לחיידר'
+className="w-full object-cover"
+/>
+</div>
 
-      <p>חלק מילדי קרצקי שהלכו לחדר.</p>
+<p className="mt-3 text-center text-sm text-stone-500">
+חלק מילדי קרצקי שהלכו איתי לחיידר
+</p>
+</div>
+
+      
+
+     
     </div>
   );
 }
