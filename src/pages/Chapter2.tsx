@@ -218,6 +218,20 @@ export default function Chapter2() {
         היה ברור מה תהיה דרכי אחרי שחרורי מזוועות הגרמנים - לעלות לארץ-ישראל.
       </p>
 
+      <div className="my-12">
+  <div className="overflow-hidden rounded-2xl border border-stone-200 shadow-sm">
+    <img
+      src="/images/parents.png"
+      alt="הורי ז"ל - אברהם יעקב ופרל (פאולה) קליין"
+      className="w-full object-cover"
+    />
+  </div>
+
+  <p className="text-center text-sm text-stone-500 mt-3">
+    הורי ז"ל - אברהם יעקב ופרל (פאולה) קליין
+  </p>
+</div>
+
       <p className="font-semibold mt-8">
         הורי ז&quot;ל - אברהם יעקב ופרל (פאולה) קליין
       </p>
