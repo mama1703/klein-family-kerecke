@@ -1,9 +1,21 @@
+import { ImageBlock } from "../components/ImageBlock";
+
 export default function Chapter7() {
   return (
     <div className="prose-hebrew">
       <h2 className="text-4xl font-bold mb-10 text-center">
         נספח - מתוך &quot;קדושי שבע קהילות&quot;
       </h2>
+
+      
+ {/* תמונה */}
+      <ImageBlock
+        src="/klein-family-kerecke/images/7-kehilot-book.png"
+        alt="מתוך קדושי שבע קהילות"
+        caption="קדושי שבע קהילות"
+      />
+
+
 
       <p>
         בספר &quot;קדושי שבע קהילות&quot; שלנו, כל סופר קהילה מזכיר באופן כללי,
@@ -80,7 +92,22 @@ export default function Chapter7() {
       <p>
         עדותם של חיים קליין, רוזמן מרדכי וקלרה שטיינר
       </p>
+ 
+  {/* תמונה */}
+      <ImageBlock
+        src="/klein-family-kerecke/images/jews-occupations.jpeg"
+        alt="עיסוק ופרנסות היהודים בקרצקי"
+        caption="עיסוק ופרנסות היהודים בקרצקי"
+      />
 
+  {/* תמונה */}
+      <ImageBlock
+        src="/klein-family-kerecke/images/kfar-map.jpeg"
+        alt="מפת המגורים של קהילת קרצקי"
+        caption="מפת המגורים של קהילת קרצקי"
+      />
+
+      
       <h3 className="text-2xl font-bold mt-12 mb-6">נתונים נוספים לכפר קרצקי</h3>
 
       <p>
@@ -99,6 +126,13 @@ export default function Chapter7() {
         שהגיעו למונקאץ&apos; והם היו אלו אשר פינו וניקו את שטח בית-החרושת
         ללבנים, אשר קלט את כל היהודים באזור זה.
       </p>
+
+       {/* תמונה */}
+      <ImageBlock
+        src="/klein-family-kerecke/images/trains.jpeg"
+        alt="רשימת רכבות שיצאו מקרפטורוס לאושוויץ"
+        caption="רשימת רכבות שיצאו מקרפטורוס לאושוויץ"
+      />
     </div>
   );
 }
