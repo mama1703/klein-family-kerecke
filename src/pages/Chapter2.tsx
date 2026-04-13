@@ -1,3 +1,5 @@
+import { ImageBlock } from "../components/ImageBlock";
+
 export default function Chapter2() {
   return (
     <div className="prose-hebrew">
@@ -218,19 +220,11 @@ export default function Chapter2() {
         היה ברור מה תהיה דרכי אחרי שחרורי מזוועות הגרמנים - לעלות לארץ-ישראל.
       </p>
 
-      <div className="my-12">
-        <div className="overflow-hidden rounded-2xl border border-stone-200 shadow-sm">
-          <img
-            src="/klein-family-kerecke/images/parents.png"
-            alt='הורי ז"ל - אברהם יעקב ופרל (פאולה) קליין'
-            className="w-full object-cover"
-          />
-        </div>
-
-        <p className="mt-3 text-center text-sm text-stone-500">
-          הורי ז"ל - אברהם יעקב ופרל (פאולה) קליין
-        </p>
-      </div>
+      <ImageBlock
+        src="/klein-family-kerecke/images/parents.png"
+        alt='הורי ז"ל - אברהם יעקב ופרל (פאולה) קליין'
+        caption='הורי ז"ל - אברהם יעקב ופרל (פאולה) קליין'
+      />
 
       <h3 className="text-2xl font-bold mt-14 mb-6">מפגשים באושוויץ, בפתח מכרה הפחם</h3>
 
