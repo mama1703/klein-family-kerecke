@@ -162,7 +162,6 @@ export default function Chapter3() {
         התארגנו בקבוצות והמשיכו דרך גרמניה ואיטליה לארץ-ישראל. בנימין ניימן
         החליט להישאר בקרצקי.
       </p>
-
       <h3 className="text-2xl font-bold mt-12 mb-6">ארי (אהרון) ווייס</h3>
 
       <p>
@@ -180,26 +179,16 @@ export default function Chapter3() {
         ארי היה צעיר ממני, אבל בחיידר למדנו יחד. ידוע לי שהוא חי בארצות הברית.
       </p>
 
- <div className="my-12 text-center">
-  <img
-    src="/klein-family-kerecke/images/kinds-haider.png"
-    alt="חלק מילדי קרצקי שהלכו איתי לחיידר"
-    className="mx-auto max-w-md rounded-2xl shadow-md"
-  />
-
-  <p className="mt-3 text-sm text-stone-500">
-    חלק מילדי קרצקי שהלכו איתי לחיידר
-  </p>
-</div>
-
-<p className="mt-3 text-center text-sm text-stone-500">
-חלק מילדי קרצקי שהלכו איתי לחיידר
-</p>
-</div>
-
-      
-
-     
+      <div className="my-12 text-center">
+        <img
+          src="/klein-family-kerecke/images/kinds-haider.png"
+          alt="חלק מילדי קרצקי שהלכו איתי לחיידר"
+          className="mx-auto max-w-md rounded-2xl shadow-md"
+        />
+        <p className="mt-3 text-sm text-stone-500">
+          חלק מילדי קרצקי שהלכו איתי לחיידר
+        </p>
+      </div>
     </div>
   );
 }
