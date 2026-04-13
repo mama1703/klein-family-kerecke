@@ -16,9 +16,12 @@ export default function StoryHaimLayout() {
       />
 
       <div className="max-w-6xl mx-auto px-4 sm:px-6 py-8 sm:py-12">
+        <div className="mb-4 text-red-500 font-bold">
+          מספר פרקים: {storyHaimChapters.length}
+        </div>
+
         <div className="flex gap-12">
           <ChapterSidebar chapters={storyHaimChapters} />
-
           <div className="flex-1 min-w-0">
             <Outlet />
           </div>
