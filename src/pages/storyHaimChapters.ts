@@ -67,4 +67,11 @@ export const storyHaimChapters: StoryHaimChapterRoute[] = [
     routePath: "chapter-6",
     element: Chapter6,
   },
+  {
+  id: "chapter-7",
+  title: 'נספח - מתוך "קדושי שבע קהילות"',
+  to: "/story-haim/chapter-7",
+  routePath: "chapter-7",
+  element: Chapter7,
+},
 ];
