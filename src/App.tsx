@@ -29,7 +29,9 @@ function NotFound() {
       <div className="max-w-md text-center">
         <h1 className="text-7xl font-bold text-foreground font-heading">404</h1>
         <h2 className="mt-4 text-xl font-semibold text-foreground">הדף לא נמצא</h2>
-        <p className="mt-2 text-sm text-muted-foreground">הדף שחיפשת אינו קיים או הועבר.</p>
+        <p className="mt-2 text-sm text-muted-foreground">
+          הדף שחיפשת אינו קיים או הועבר.
+        </p>
         <div className="mt-6">
           <Link
             to="/"
