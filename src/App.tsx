@@ -4,14 +4,11 @@ import { SiteFooter } from "./components/SiteFooter";
 import { ScrollToTop } from "./components/ScrollToTop";
 import HomePage from "./pages/HomePage";
 import StoryHaimLayout from "./pages/StoryHaimLayout";
-import StoryHaimIndex from "./pages/StoryHaimIndex";
-import Chapter1 from "./pages/Chapter1";
-import Chapter2 from "./pages/Chapter2";
-import Chapter3 from "./pages/Chapter3";
 import StoryHershi from "./pages/StoryHershi";
 import StoryHadva from "./pages/StoryHadva";
 import StoryAvi from "./pages/StoryAvi";
 import ArticlesPage from "./pages/ArticlesPage";
+import { storyHaimChapters } from "./pages/storyHaimChapters";
 
 function Layout() {
   return (
@@ -34,7 +31,10 @@ function NotFound() {
         <h2 className="mt-4 text-xl font-semibold text-foreground">הדף לא נמצא</h2>
         <p className="mt-2 text-sm text-muted-foreground">הדף שחיפשת אינו קיים או הועבר.</p>
         <div className="mt-6">
-          <Link to="/" className="inline-flex items-center justify-center rounded-md bg-primary px-4 py-2 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90">
+          <Link
+            to="/"
+            className="inline-flex items-center justify-center rounded-md bg-primary px-4 py-2 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90"
+          >
             חזרה לדף הבית
           </Link>
         </div>
@@ -48,12 +48,25 @@ export function App() {
     <Routes>
       <Route element={<Layout />}>
         <Route path="/" element={<HomePage />} />
+
         <Route path="/story-haim" element={<StoryHaimLayout />}>
-          <Route index element={<StoryHaimIndex />} />
-          <Route path="chapter-1" element={<Chapter1 />} />
-          <Route path="chapter-2" element={<Chapter2 />} />
-          <Route path="chapter-3" element={<Chapter3 />} />
+          {storyHaimChapters.map((chapter) => {
+            const Component = chapter.element;
+
+            if (chapter.index) {
+              return <Route key={chapter.id} index element={<Component />} />;
+            }
+
+            return (
+              <Route
+                key={chapter.id}
+                path={chapter.routePath}
+                element={<Component />}
+              />
+            );
+          })}
         </Route>
+
         <Route path="/story-hershi" element={<StoryHershi />} />
         <Route path="/story-hadva" element={<StoryHadva />} />
         <Route path="/story-avi" element={<StoryAvi />} />
