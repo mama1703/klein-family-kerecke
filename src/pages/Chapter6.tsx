@@ -735,7 +735,7 @@ export default function Chapter6() {
 
        {/* תמונה */}
      <ImageBlock
-  src="/klein-family-kerecke/images/rachel-klein-queen.png"
+  src="/klein-family-kerecke/images/rachel-klein-queen.jpeg"
   alt="רחל קליין"
   caption={'רחל קליין'}
 />
