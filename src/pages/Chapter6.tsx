@@ -815,23 +815,25 @@ export default function Chapter6() {
       <p className="font-semibold">חיים קליין</p>
       <p>משמר הירדן, תל אביב</p>
 
-     <div className="my-16 border-4 border-black p-10 text-center bg-white">
+  <div className="my-16 border-4 border-black p-10 text-center bg-white">
   <h3 className="text-4xl font-bold mb-6 tracking-wide">יזכור</h3>
 
   <div className="w-16 h-px bg-black mx-auto mb-6" />
 
   <p className="mb-4 leading-8">
-    ברצוני ומחובתי להזכיר את זכרם של אחדים מחברי הנוער הציוני...
+    ברצוני ומחובתי להזכיר את זכרם של אחדים מחברי הנוער הציוני מקבוצת ישעיהו רוזנבלום (המכונה בהונגרית &quot;שעיו&quot;), שמסרו את נפשם ונפלו בקרבות על המדינה במלחמת השחרור:
   </p>
 
-  <p>• אלבוגן ארבין (קשתי)</p>
-  <p>• פולק אונטי</p>
-  <p>• קליין טיבי</p>
+  <p>• אלבוגן ארבין (קשתי) - נפל בקרב על קולה (גבעת כ&quot;ח)</p>
+  <p>• פולק אונטי - נפל בואדי עארה</p>
+  <p>• קליין טיבי - תלמיד הגמנסיה העברית במונקץ&apos;, נפל במלחמת השחרור</p>
 
   <div className="w-16 h-px bg-black mx-auto my-6" />
 
-  <p className="italic">
-    שמם ייזכר בליבנו לעולם
+  <p className="italic leading-8">
+    כולם התנדבו טרם היו חייבים גיוס.<br />
+    סגל טיבי נפטר ממחלה בזמן מלחמת השחרור.<br />
+    שמם ייזכר בליבנו לעולם.
   </p>
 </div>
 
