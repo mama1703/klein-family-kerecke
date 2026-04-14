@@ -9,7 +9,7 @@ import Chapter4 from "./Chapter4";
 import Chapter5 from "./Chapter5";
 import Chapter6 from "./Chapter6";
 import Chapter7 from "./Chapter7";
-import Chapter7 from "./Chapter8";
+import Chapter8 from "./Chapter8";
 
 export type StoryHaimChapterRoute = Chapter & {
   index?: boolean;
@@ -76,7 +76,7 @@ export const storyHaimChapters: StoryHaimChapterRoute[] = [
   },
   {
     id: "chapter-8",
-    title: 'נספח - תמונות ממפגש הנוער הציוני בארץ"',
+    title: 'נספח - תמונות ממפגש הנוער הציוני בארץ',
     to: "/story-haim/chapter-8",
     routePath: "chapter-8",
     element: Chapter8,
