@@ -148,7 +148,7 @@ export default function Chapter6() {
 
  {/* תמונה */}
       <ImageBlock
-        src="/klein-family-kerecke/images/evi-haim-lifehaim"
+        src="/klein-family-kerecke/images/evi-haim-lifehaim.png"
         alt="חיים, רחל וחדווה בלייפהיים בגרמניה"
         caption="לייפהיים, גרמניה, 1946 - משמאל: חדווה (פריידי) קליין, חיים קליין, רחל (אווי) סיגמונד (קליין)"
       />
@@ -582,8 +582,8 @@ export default function Chapter6() {
       <ImageBlock
         src="/klein-family-kerecke/images/kafrisin.png"
         alt="קפריסין - המגורים שלנו"
-        caption="קפריסין - צריף מפח לוהט, בלי חלונות - המגורים שלנו
-"
+        caption="קפריסין - צריף מפח לוהט, בלי חלונות - המגורים שלנו"
+
       />
 
 
@@ -741,8 +741,8 @@ export default function Chapter6() {
       <ImageBlock
         src="/klein-family-kerecke/images/rachel-klein-queen.png"
         alt="רחל קליין"
-        caption="רחל קליין
-"
+        caption="רחל קליין"
+
       />
 
 
