@@ -862,6 +862,15 @@ export default function Chapter6() {
 
       <p className="font-semibold">משפחת קליין</p>
       <p>הרשי יהודה צבי (מלי בצ&apos;כית) עם אליסקה שטרן מסווליאווה, הונגריה</p>
+
+  {/* תמונה */}
+     <ImageBlock
+  src="/klein-family-kerecke/images/tree.jpeg"
+  alt="עץ משפחה"
+  caption={'עץ המשפחה שנגדע והצמיח שורשים מחדש'}
+/>
+      
+      
     </div>
   );
 }
