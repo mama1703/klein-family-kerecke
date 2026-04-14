@@ -139,19 +139,19 @@ export default function Chapter6() {
         ראשון וערכנו סדר פסח ראשון עם יין תוצרת הארץ.
       </p>
  {/* תמונה */}
-      <ImageBlock
-        src="/klein-family-kerecke/images/noar-tzioni.png"
-        alt="חברים בגרמניה"
-        caption="שניה משמאל רחל (אווי) סיגמונד (קליין), חיים קליין, חדווה (פריידי) קליין (לדרמן), מאיר לדרמן"
-      />
+     <ImageBlock
+  src="/klein-family-kerecke/images/noar-tzioni.png"
+  alt="חברים בגרמניה"
+  caption={'שנייה משמאל: רחל (אווי) סיגמונד (קליין), חיים קליין, חדווה (פריידי) קליין (לדרמן), מאיר לדרמן'}
+/>
 
 
  {/* תמונה */}
-      <ImageBlock
-        src="/klein-family-kerecke/images/evi-haim-lifehaim.png"
-        alt="חיים, רחל וחדווה בלייפהיים בגרמניה"
-        caption="לייפהיים, גרמניה, 1946 - משמאל: חדווה (פריידי) קליין, חיים קליין, רחל (אווי) סיגמונד (קליין)"
-      />
+     <ImageBlock
+  src="/klein-family-kerecke/images/evi-haim-lifehaim.png"
+  alt="חיים, רחל וחדווה בלייפהיים בגרמניה"
+  caption={'לייפהיים, גרמניה, 1946 - משמאל: חדווה (פריידי) קליין, חיים קליין, רחל (אווי) סיגמונד (קליין)'}
+/>
       
     
       <h3 className="text-2xl font-bold mt-12 mb-6">הכשרות חקלאיות בגרמניה</h3>
@@ -180,10 +180,10 @@ export default function Chapter6() {
 
  {/* תמונה */}
       <ImageBlock
-        src="/klein-family-kerecke/images/nagaria.png"
-        alt="נגריה שהקמנו במיינקהופן"
-        caption="נגריה שהקמנו במיינקהופן"
-      />
+  src="/klein-family-kerecke/images/nagaria.png"
+  alt="נגריה שהקמנו במיינקהופן"
+  caption={'נגריה שהקמנו במיינקהופן'}
+/>
 
 
       <p>
@@ -201,53 +201,53 @@ export default function Chapter6() {
 
 
  {/* תמונה */}
-      <ImageBlock
-        src="/klein-family-kerecke/images/lesson-with-haim.png"
-        alt="נגריה שהקמנו במיינקהופן"
-        caption="מיינקהופן גרמניה, 1946 - הנערים מקבוצת ‘שעיו’, עם המדריך חיים קליין (עומד מימין) בשיעור מקצועי בהכשרה, בדרך לארץ ישראל"
-      />
+    <ImageBlock
+  src="/klein-family-kerecke/images/lesson-with-haim.png"
+  alt="שיעור מקצועי בהכשרה"
+  caption={'מיינקהופן, גרמניה, 1946 - הנערים מקבוצת "שעיו", עם המדריך חיים קליין (עומד מימין) בשיעור מקצועי בהכשרה, בדרך לארץ ישראל'}
+/>
 
 
 
     
  {/* תמונה */}
-      <ImageBlock
-        src="/klein-family-kerecke/images/bykes-lifehime.png"
-        alt="אופנועים שתוקנו בקורס מכונאות"
-        caption="אופנועים שתוקנו בקורס מכונאות שהעביר חיים קליין בהכשרה בדרך לארץ. נוהג על האופנוע השני מימין - ישעיהו רוזנבלום, נוהג על האופנוע השלישי מימין - חיים קליין"
-      />
+     <ImageBlock
+  src="/klein-family-kerecke/images/bykes-lifehime.png"
+  alt="אופנועים שתוקנו בקורס מכונאות"
+  caption={'אופנועים שתוקנו בקורס מכונאות שהעביר חיים קליין בהכשרה בדרך לארץ. נוהג על האופנוע השני מימין - ישעיהו רוזנבלום, נוהג על האופנוע השלישי מימין - חיים קליין'}
+/>
+
+ {/* תמונה */}
+     <ImageBlock
+  src="/klein-family-kerecke/images/grossary.png"
+  alt="מחסן מצרכים"
+  caption={'מחסן מצרכים בהכשרה החקלאית בדרך לארץ. משמאל: חיים קליין, במרכז: ארווין אלבוגן (קשתי) ז"ל, אשר התנדב לצה"ל ונפל במלחמת השחרור'}
+/>
+
 
  {/* תמונה */}
       <ImageBlock
-        src="/klein-family-kerecke/images/grossary.png"
-        alt="מחסן מצרכים"
-        caption="מחסן מצרכים בהכשרה החקלאית בדרך לארץ. משמאל: חיים קליין, במרכז: ארווין אלבוגן (קשתי) ז”ל, אשר התנדב לצה”ל ונפל במלחמת השחרור"
-      />
-
-
- {/* תמונה */}
-      <ImageBlock
-        src="/klein-family-kerecke/images/car-lesson-haim.png"
-        alt="שיעור מכונאות עם חיים"
-        caption="שיעור מכונאות בהדרכתו של חיים קליין. הנער מימין, אונטי פולק ז”ל, התנדב לצה”ל ונפל במלחמת השחרור"
-      />
+  src="/klein-family-kerecke/images/car-lesson-haim.png"
+  alt="שיעור מכונאות עם חיים"
+  caption={'שיעור מכונאות בהדרכתו של חיים קליין. הנער מימין, אונטי פולק ז"ל, התנדב לצה"ל ונפל במלחמת השחרור'}
+/>
 
 
 
      {/* תמונה */}
-      <ImageBlock
-        src="/klein-family-kerecke/images/hasmalia.png"
-        alt="בחשמליה"
-        caption="בחשמליה"
-      />
+     <ImageBlock
+  src="/klein-family-kerecke/images/hasmalia.png"
+  alt="בחשמליה"
+  caption={'בחשמליה'}
+/>
 
      
  {/* תמונה */}
-      <ImageBlock
-        src="/klein-family-kerecke/images/masgeria.png"
-        alt="במסגריה"
-        caption="במסגריה - משמאל: חיים קליין ומימין מאחור: אונטי פולק ז”ל"
-      />
+    <ImageBlock
+  src="/klein-family-kerecke/images/masgeria.png"
+  alt="במסגריה"
+  caption={'במסגריה - משמאל: חיים קליין ומימין מאחור: אונטי פולק ז"ל'}
+/>
 
 
 
@@ -308,11 +308,11 @@ export default function Chapter6() {
 
       
       {/* תמונה */}
-      <ImageBlock
-        src="/klein-family-kerecke/images/haim-yishay-dome.png"
-        alt="חיים וישי קובץ’ בדום באיטליה"
-        caption="קובץ’ ישי וחיים קליין על רקע הדום באיטליה"
-      />
+     <ImageBlock
+  src="/klein-family-kerecke/images/haim-yishay-dome.png"
+  alt="חיים וישי קובץ' בדום באיטליה"
+  caption={'קובץ\' ישי וחיים קליין על רקע הדום באיטליה'}
+/>
 
 
       <p>
@@ -338,27 +338,24 @@ export default function Chapter6() {
         היה ידען גדול.
       </p>
 
-
+        {/* תמונה */}
+<ImageBlock
+  src="/klein-family-kerecke/images/all-vatikan.png"
+  alt="נוער ציוני בכיפת הותיקן"
+  caption={'רומא, איטליה 1947, על רקע כיפת הותיקן. יושבים בשורה התחתונה מימין: ארוין אלבוגן (קשתי) ז"ל, טיבי קליין ז"ל ואונטי פולק ז"ל, אשר נפלו במלחמת השחרור. שורה שניה משמאל: חיים קליין ושניה מימין: חדווה קליין'}
+/>
       
-       {/* תמונה */}
-      <ImageBlock
-        src="/klein-family-kerecke/images/all-vatikan.png"
-        alt="נוער ציוני בכיפת הותיקן"
-        caption="רומא, איטליה 1947, על רקע כיפת הותיקן. יושבים בשורה התחתונה מימין: ארוין אלבוגן (קשתי) זל טיבי קליין ז"ל ואונטי פולק זל, אשר נפלו במלחמת השחרור. שורה שניה משמאל: חיים קליין ושניה מימין: חדווה קליין"
-
-      />
-
+    
 
 
 
     
  {/* תמונה */}
-      <ImageBlock
-        src="/klein-family-kerecke/images/haim-hedva-vatikan.png"
-        alt="קריית הותיקן"
-        caption="קריית הותיקן. משמאל לימין: בורי, בת-שבע, חיים קליין וחדווה (פריידי) קליין (לדרמן)"
-
-      />
+     <ImageBlock
+  src="/klein-family-kerecke/images/haim-hedva-vatikan.png"
+  alt="קריית הותיקן"
+  caption={'קריית הותיקן. משמאל לימין: בורי, בת-שבע, חיים קליין וחדווה (פריידי) קליין (לדרמן)'}
+/>
 
 
       <h3 className="text-2xl font-bold mt-12 mb-6">
@@ -579,12 +576,11 @@ export default function Chapter6() {
       </p>
       
  {/* תמונה */}
-      <ImageBlock
-        src="/klein-family-kerecke/images/kafrisin.png"
-        alt="קפריסין - המגורים שלנו"
-        caption="קפריסין - צריף מפח לוהט, בלי חלונות - המגורים שלנו"
-
-      />
+     <ImageBlock
+  src="/klein-family-kerecke/images/kafrisin.png"
+  alt="קפריסין - המגורים שלנו"
+  caption={'קפריסין - צריף מפח לוהט, בלי חלונות - המגורים שלנו'}
+/>
 
 
 
@@ -706,20 +702,20 @@ export default function Chapter6() {
       </p>
 
       {/* תמונה */}
-      <ImageBlock
-        src="/klein-family-kerecke/images/evi-haim-ami-azur.png"
-        alt="אווי וחיים קליין עם בנם הבכור, עמי, באזור"
-        caption="אווי וחיים קליין עם בנם הבכור, עמי, באזור"
-      />
+    <ImageBlock
+  src="/klein-family-kerecke/images/evi-haim-ami-azur.png"
+  alt="אווי וחיים קליין עם בנם הבכור, עמי, באזור"
+  caption={'אווי וחיים קליין עם בנם הבכור, עמי, באזור'}
+/>
 
 
 
       {/* תמונה */}
-      <ImageBlock
-        src="/klein-family-kerecke/images/haim-meir-azur.png"
-        alt="חיים קליין ומאיר לדרמן באזור"
-        caption="חיים קליין ומאיר לדרמן, שני חיילים בונים את ביתם באזור"
-      />
+ <ImageBlock
+  src="/klein-family-kerecke/images/haim-meir-azur.png"
+  alt="חיים קליין ומאיר לדרמן באזור"
+  caption={'חיים קליין ומאיר לדרמן, שני חיילים בונים את ביתם באזור'}
+/>
 
 
       <h3 className="text-2xl font-bold mt-12 mb-6">
@@ -738,12 +734,11 @@ export default function Chapter6() {
       </p>
 
        {/* תמונה */}
-      <ImageBlock
-        src="/klein-family-kerecke/images/rachel-klein-queen.png"
-        alt="רחל קליין"
-        caption="רחל קליין"
-
-      />
+     <ImageBlock
+  src="/klein-family-kerecke/images/rachel-klein-queen.png"
+  alt="רחל קליין"
+  caption={'רחל קליין'}
+/>
 
 
       <h3 className="text-2xl font-bold mt-12 mb-6">כל ההתחלות קשות</h3>
