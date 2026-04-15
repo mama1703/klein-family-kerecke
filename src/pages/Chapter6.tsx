@@ -1,3 +1,5 @@
+import { ChapterBottomNav } from "../components/ChapterBottomNav";
+
 import { ImageBlock } from "../components/ImageBlock";
 
 export default function Chapter6() {
@@ -862,7 +864,7 @@ export default function Chapter6() {
   alt="עץ משפחה"
   caption={'עץ המשפחה שנגדע והצמיח שורשים מחדש'}
 />
-      
+      <ChapterBottomNav />
       
     </div>
   );
