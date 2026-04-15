@@ -1,3 +1,5 @@
+import { ChapterBottomNav } from "../components/ChapterBottomNav";
+
 import { ImageBlock } from "../components/ImageBlock";
 
 export default function Chapter3() {
@@ -106,6 +108,8 @@ export default function Chapter3() {
         alt="חלק מילדי קרצקי שהלכו איתי לחיידר"
         caption="חלק מילדי קרצקי שהלכו איתי לחיידר"
       />
+
+      <ChapterBottomNav />
     </div>
   );
 }
