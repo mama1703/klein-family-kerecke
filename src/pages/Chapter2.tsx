@@ -1,3 +1,5 @@
+import { ChapterBottomNav } from "../components/ChapterBottomNav";
+
 import { ImageBlock } from "../components/ImageBlock";
 
 export default function Chapter2() {
@@ -306,6 +308,8 @@ export default function Chapter2() {
         צר לי עליהם שלא זכו להשתתף בתקומת מדינת ישראל ולא זכו לראות מדינה
         ריבונית לעם היהודי בישראל.
       </p>
+
+      <ChapterBottomNav />
     </div>
   );
 }
