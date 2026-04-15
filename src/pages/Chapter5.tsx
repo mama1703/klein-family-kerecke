@@ -1,3 +1,5 @@
+import { ChapterBottomNav } from "../components/ChapterBottomNav";
+
 import { ImageBlock } from "../components/ImageBlock";
 
 export default function Chapter5() {
@@ -187,7 +189,7 @@ export default function Chapter5() {
         alt="בוקרשט, רומניה"
         caption="חיים קליין מימין - בוקרשט, רומניה"
       />
-
+<ChapterBottomNav />
     </div>
   );
 }
