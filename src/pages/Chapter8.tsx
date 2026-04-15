@@ -1,3 +1,5 @@
+import { ChapterBottomNav } from "../components/ChapterBottomNav";
+
 import { ImageBlock } from "../components/ImageBlock";
 
 export default function Chapter8() {
@@ -27,6 +29,8 @@ export default function Chapter8() {
         alt="יהודית ריצר דוורית המחתרת"
         caption={'מפגש בישראל, לאחר 50 שנה, עם יהודית ריצ\'ר, דוורית של המחתרת הציונית בבית הזכוכית שנסעה איתי לבוקרשט, רומניה'}
       />
+
+      <ChapterBottomNav />
     </div>
   );
 }
