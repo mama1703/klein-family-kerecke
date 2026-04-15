@@ -1,3 +1,5 @@
+import { ChapterBottomNav } from "../components/ChapterBottomNav";
+
 export default function Chapter4() {
   return (
     <div className="prose-hebrew">
@@ -257,7 +259,7 @@ export default function Chapter4() {
 </p>
 
 
-
+<ChapterBottomNav />
 
     </div>
   );
