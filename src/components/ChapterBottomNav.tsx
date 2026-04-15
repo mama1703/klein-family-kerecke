@@ -18,32 +18,42 @@ export function ChapterBottomNav() {
       ? storyHaimChapters[currentIndex + 1]
       : null;
 
+  const handleNavigate = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
   return (
-    <div className="not-prose mt-16 border-t border-stone-200 pt-8">
-      <div className="grid gap-4 sm:grid-cols-2">
-        <div>
-          {prevChapter && (
+    <div className="not-prose mt-16 border-t border-stone-200 pt-6">
+      <div className="grid gap-6 sm:grid-cols-2">
+        <div className="text-right">
+          {nextChapter && (
             <Link
-              to={prevChapter.to}
-              className="block rounded-2xl border border-stone-200 bg-white p-5 transition hover:border-stone-400 hover:shadow-sm"
+              to={nextChapter.to}
+              onClick={handleNavigate}
+              className="group inline-block"
             >
-              <div className="text-sm text-stone-500">לפרק הקודם</div>
-              <div className="mt-1 font-semibold text-stone-900">
-                {prevChapter.title}
+              <div className="text-sm font-medium text-stone-500 transition group-hover:text-stone-700">
+                לפרק הבא ←
+              </div>
+              <div className="mt-1 text-base font-semibold text-stone-900 transition group-hover:text-stone-700">
+                {nextChapter.title}
               </div>
             </Link>
           )}
         </div>
 
-        <div>
-          {nextChapter && (
+        <div className="text-left">
+          {prevChapter && (
             <Link
-              to={nextChapter.to}
-              className="block rounded-2xl border border-stone-200 bg-white p-5 text-right transition hover:border-stone-400 hover:shadow-sm"
+              to={prevChapter.to}
+              onClick={handleNavigate}
+              className="group inline-block"
             >
-              <div className="text-sm text-stone-500">לפרק הבא</div>
-              <div className="mt-1 font-semibold text-stone-900">
-                {nextChapter.title}
+              <div className="text-sm font-medium text-stone-500 transition group-hover:text-stone-700">
+                → לפרק הקודם
+              </div>
+              <div className="mt-1 text-base font-semibold text-stone-900 transition group-hover:text-stone-700">
+                {prevChapter.title}
               </div>
             </Link>
           )}
