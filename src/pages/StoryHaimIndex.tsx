@@ -1,3 +1,5 @@
+import { ChapterBottomNav } from "../components/ChapterBottomNav";
+
 export default function StoryHaimIndex() {
   return (
     <div className="prose-hebrew">
@@ -47,6 +49,8 @@ export default function StoryHaimIndex() {
         <p className="font-semibold">חיים קליין</p>
         <p>תל-אביב, 1993</p>
       </div>
+
+      <ChapterBottomNav />
     </div>
   );
 }
