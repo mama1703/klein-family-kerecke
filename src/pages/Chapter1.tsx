@@ -1,3 +1,5 @@
+import { ChapterBottomNav } from "../components/ChapterBottomNav";
+
 export default function Chapter1() {
   return (
     <div className="prose-hebrew">
@@ -550,6 +552,8 @@ export default function Chapter1() {
       <p>
         ידוע לי משיחה עם יהודה צבי ווייס, שאיתו עלה לארץ חבר נוסף מברזניק הסמוכה.
       </p>
+
+      <ChapterBottomNav />
     </div>
   );
 }
