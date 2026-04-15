@@ -1,3 +1,5 @@
+import { ChapterBottomNav } from "../components/ChapterBottomNav";
+
 import { ImageBlock } from "../components/ImageBlock";
 
 export default function Chapter7() {
@@ -133,6 +135,8 @@ export default function Chapter7() {
         alt="רשימת רכבות שיצאו מקרפטורוס לאושוויץ"
         caption="רשימת רכבות שיצאו מקרפטורוס לאושוויץ"
       />
+
+      <ChapterBottomNav />
     </div>
   );
 }
