@@ -1,8 +1,15 @@
-import { Link, useLocation } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import { storyHaimChapters } from "../pages/storyHaimChapters";
+
+const scrollTop = () => {
+  window.scrollTo(0, 0);
+  document.documentElement.scrollTop = 0;
+  document.body.scrollTop = 0;
+};
 
 export function ChapterBottomNav() {
   const location = useLocation();
+  const navigate = useNavigate();
   const currentPath = location.pathname.replace(/\/$/, "") || "/";
 
   const currentIndex = storyHaimChapters.findIndex((chapter) => {
@@ -15,9 +22,9 @@ export function ChapterBottomNav() {
   const prevChapter = currentIndex > 0 ? storyHaimChapters[currentIndex - 1] : null;
   const nextChapter = currentIndex < storyHaimChapters.length - 1 ? storyHaimChapters[currentIndex + 1] : null;
 
-  const scrollToTop = () => {
-    document.documentElement.scrollTop = 0;
-    document.body.scrollTop = 0;
+  const handleNav = (to: string) => {
+    scrollTop();
+    navigate(to);
   };
 
   return (
@@ -27,28 +34,28 @@ export function ChapterBottomNav() {
         {/* פרק הבא */}
         <div className="text-right">
           {nextChapter && (
-            <Link to={nextChapter.to} onClick={scrollToTop} className="group inline-block">
+            <button onClick={() => handleNav(nextChapter.to)} className="group inline-block text-right">
               <div className="text-sm font-medium text-stone-500 transition group-hover:text-stone-700">
                 לפרק הבא ←
               </div>
               <div className="mt-1 text-base font-semibold text-stone-900 transition group-hover:text-stone-700">
                 {nextChapter.title}
               </div>
-            </Link>
+            </button>
           )}
         </div>
 
         {/* פרק קודם */}
         <div className="text-left">
           {prevChapter && (
-            <Link to={prevChapter.to} onClick={scrollToTop} className="group inline-block">
+            <button onClick={() => handleNav(prevChapter.to)} className="group inline-block text-left">
               <div className="text-sm font-medium text-stone-500 transition group-hover:text-stone-700">
                 → לפרק הקודם
               </div>
               <div className="mt-1 text-base font-semibold text-stone-900 transition group-hover:text-stone-700">
                 {prevChapter.title}
               </div>
-            </Link>
+            </button>
           )}
         </div>
 
