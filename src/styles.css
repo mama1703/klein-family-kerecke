@@ -97,11 +97,12 @@
 @layer base {
   * {
     border-color: var(--color-border);
+    scroll-behavior: auto !important;
   }
 
   html {
     direction: rtl;
-    /* scroll-behavior: smooth הוסר — גורם לגלילה ארוכה בניווט בין פרקים */
+    scroll-behavior: auto !important;
   }
 
   body {
@@ -111,6 +112,7 @@
     line-height: 1.85;
     font-size: 1.05rem;
     -webkit-font-smoothing: antialiased;
+    scroll-behavior: auto !important;
   }
 
   h1, h2, h3, h4, h5, h6 {
