@@ -135,16 +135,16 @@
     max-width: 42rem;
   }
 
+  .prose-hebrew > h2:first-of-type {
+    margin-top: 0 !important;
+  }
+
   .prose-hebrew h2 {
     font-family: var(--font-heading);
     font-size: 1.75rem;
     margin-top: 2.5em;
-    margin-bottom: 0.8em;
+    margin-bottom: 0.5em;
     color: var(--color-foreground);
-  }
-
-  .prose-hebrew h2:first-child {
-    margin-top: 0;
   }
 
   .prose-hebrew h3 {
