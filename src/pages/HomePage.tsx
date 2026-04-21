@@ -14,7 +14,7 @@ export default function HomePage() {
   return (
     <div>
       <section className="bg-card border-b border-border">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 py-10 sm:py-14 text-center">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 py-7 sm:py-10 text-center">
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -42,7 +42,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="max-w-3xl mx-auto px-4 sm:px-6 py-8 text-right leading-relaxed">
+      <section className="max-w-3xl mx-auto px-4 sm:px-6 pt-12 pb-8 text-right leading-relaxed">
         <p className="mb-4">
           באתר זה, תוכלו למצוא את עזבונו של סבי, לצד עדויות וסיפורים של בני המשפחה.
         </p>
