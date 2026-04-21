@@ -1,4 +1,5 @@
-import { Routes, Route, Outlet, Link } from "react-router-dom";
+import { Routes, Route, Outlet, Link, useLocation } from "react-router-dom";
+import { useEffect } from "react";
 import { SiteHeader } from "./components/SiteHeader";
 import { SiteFooter } from "./components/SiteFooter";
 import { ScrollToTop } from "./components/ScrollToTop";
@@ -9,6 +10,15 @@ import StoryHadva from "./pages/StoryHadva";
 import StoryAvi from "./pages/StoryAvi";
 import ArticlesPage from "./pages/ArticlesPage";
 import { storyHaimChapters } from "./pages/storyHaimChapters";
+
+function ScrollReset() {
+  const { pathname } = useLocation();
+  useEffect(() => {
+    document.documentElement.scrollTop = 0;
+    document.body.scrollTop = 0;
+  }, [pathname]);
+  return null;
+}
 
 function Layout() {
   return (
@@ -48,17 +58,14 @@ function NotFound() {
 export function App() {
   return (
     <Routes>
-      <Route element={<Layout />}>
+      <Route element={<><ScrollReset /><Layout /></>}>
         <Route path="/" element={<HomePage />} />
-
         <Route path="/story-haim" element={<StoryHaimLayout />}>
           {storyHaimChapters.map((chapter) => {
             const Component = chapter.element;
-
             if (chapter.index) {
               return <Route key={chapter.id} index element={<Component />} />;
             }
-
             return (
               <Route
                 key={chapter.id}
@@ -68,7 +75,6 @@ export function App() {
             );
           })}
         </Route>
-
         <Route path="/story-hershi" element={<StoryHershi />} />
         <Route path="/story-hadva" element={<StoryHadva />} />
         <Route path="/story-avi" element={<StoryAvi />} />
