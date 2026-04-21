@@ -16,7 +16,7 @@ export default function StoryHaimLayout() {
       />
       <div className="max-w-6xl mx-auto px-4 sm:px-6 pt-0 pb-6">
         <div className="flex flex-col lg:flex-row gap-6 lg:gap-12">
-          <div className="w-full lg:w-64 lg:shrink-0 pt-4">
+          <div className="w-full lg:w-64 lg:shrink-0 pt-16">
             <ChapterSidebar chapters={storyHaimChapters} />
           </div>
           <div className="flex-1 min-w-0 w-full pt-4">
