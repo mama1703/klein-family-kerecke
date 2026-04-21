@@ -1,10 +1,8 @@
 import { useState, useEffect } from "react";
-import { useLocation } from "react-router-dom";
 import { ArrowUp } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
 export function ScrollToTop() {
-  const { pathname } = useLocation();
   const [visible, setVisible] = useState(false);
 
   useEffect(() => {
@@ -20,7 +18,10 @@ export function ScrollToTop() {
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
           exit={{ opacity: 0, scale: 0.8 }}
-          onClick={() => { window.scrollTo(0, 0); document.documentElement.scrollTop = 0; }}
+          onClick={() => {
+            document.documentElement.scrollTop = 0;
+            document.body.scrollTop = 0;
+          }}
           className="fixed bottom-6 left-6 z-40 p-3 rounded-full bg-primary text-primary-foreground shadow-lg hover:bg-primary/90 transition-colors"
           aria-label="חזרה למעלה"
         >
