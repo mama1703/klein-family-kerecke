@@ -1,4 +1,4 @@
-import { NavLink, useLocation } from "react-router-dom";
+import { NavLink, useLocation, Link } from "react-router-dom";
 import { useMemo, useState } from "react";
 import { ChevronDown, List } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
@@ -35,7 +35,6 @@ export function ChapterSidebar({ chapters }: ChapterSidebarProps) {
           <h3 className="font-heading text-sm font-semibold text-muted-foreground mb-3">
             פרקים
           </h3>
-
           <nav className="space-y-0.5">
             {chapters.map((ch) => (
               <NavLink
@@ -57,60 +56,27 @@ export function ChapterSidebar({ chapters }: ChapterSidebarProps) {
         </div>
       </aside>
 
-      {/* Mobile chapters menu */}
-      <div className="lg:hidden mb-8">
-        <button
-          onClick={() => setMobileOpen((prev) => !prev)}
-          className="w-full flex items-center justify-between gap-3 rounded-2xl border border-border bg-card px-4 py-4 text-right"
-          aria-expanded={mobileOpen}
-          aria-label="פתחי תפריט פרקים"
-        >
-          <span className="flex items-center gap-2 shrink-0 text-muted-foreground">
-            <List size={18} />
-            <span className="text-sm font-medium">פרקים</span>
-          </span>
-
-          <span className="flex-1 text-sm font-semibold text-foreground truncate">
-            {activeChapter?.title}
-          </span>
-
-          <ChevronDown
-            size={18}
-            className={`shrink-0 transition-transform ${mobileOpen ? "rotate-180" : ""}`}
-          />
-        </button>
-
-        <AnimatePresence initial={false}>
-          {mobileOpen && (
-            <motion.div
-              initial={{ height: 0, opacity: 0 }}
-              animate={{ height: "auto", opacity: 1 }}
-              exit={{ height: 0, opacity: 0 }}
-              transition={{ duration: 0.2 }}
-              className="overflow-hidden"
-            >
-              <nav className="mt-2 rounded-2xl border border-border bg-card p-2 space-y-1">
-                {chapters.map((ch) => (
-                  <NavLink
-                    key={ch.id}
-                    to={ch.to}
-                    end
-                    onClick={() => setMobileOpen(false)}
-                    className={({ isActive }) =>
-                      `block rounded-xl px-3 py-3 text-sm transition-colors ${
-                        isActive
-                          ? "bg-accent text-foreground font-medium"
-                          : "text-muted-foreground hover:bg-accent/50 hover:text-foreground"
-                      }`
-                    }
-                  >
-                    {ch.title}
-                  </NavLink>
-                ))}
-              </nav>
-            </motion.div>
-          )}
-        </AnimatePresence>
+      {/* Mobile: grid of chapter cards */}
+      <div className="lg:hidden mb-6">
+        <p className="text-xs font-semibold text-muted-foreground mb-3 px-1">פרקים</p>
+        <div className="grid grid-cols-2 gap-2">
+          {chapters.map((ch) => {
+            const isActive = location.pathname.replace(/\/$/, "") === ch.to.replace(/\/$/, "");
+            return (
+              <Link
+                key={ch.id}
+                to={ch.to}
+                className={`rounded-xl border px-3 py-3 text-sm transition-colors leading-snug ${
+                  isActive
+                    ? "border-primary/40 bg-accent text-foreground font-semibold"
+                    : "border-border bg-card text-muted-foreground hover:text-foreground hover:bg-accent/50"
+                }`}
+              >
+                {ch.title}
+              </Link>
+            );
+          })}
+        </div>
       </div>
     </>
   );
