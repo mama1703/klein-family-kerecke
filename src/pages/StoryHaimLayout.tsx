@@ -14,7 +14,7 @@ export default function StoryHaimLayout() {
           { label: "הסיפור של חיים" },
         ]}
       />
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 py-4 sm:py-6">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 pt-3 pb-6">
         <div className="flex flex-col lg:flex-row gap-6 lg:gap-12">
           <div className="w-full lg:w-64 lg:shrink-0">
             <ChapterSidebar chapters={storyHaimChapters} />
