@@ -7,12 +7,10 @@ export function ScrollToTop() {
   const { pathname } = useLocation();
   const [visible, setVisible] = useState(false);
 
-  // גלול למעלה בכל מעבר בין דפים
   useEffect(() => {
-    window.scrollTo({ top: 0, behavior: "instant" });
+    document.documentElement.scrollTop = 0;
   }, [pathname]);
 
-  // כפתור חזרה למעלה
   useEffect(() => {
     const onScroll = () => setVisible(window.scrollY > 400);
     window.addEventListener("scroll", onScroll, { passive: true });
