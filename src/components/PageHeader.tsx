@@ -15,7 +15,7 @@ interface PageHeaderProps {
 export function PageHeader({ title, subtitle, breadcrumbs }: PageHeaderProps) {
   return (
     <div className="border-b border-border bg-card">
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 py-5 sm:py-7">
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 py-6 sm:py-8">
         {breadcrumbs && breadcrumbs.length > 0 && (
           <nav className="flex items-center gap-1 text-sm text-muted-foreground mb-3">
             {breadcrumbs.map((crumb, i) => (
