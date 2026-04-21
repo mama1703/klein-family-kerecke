@@ -3,7 +3,7 @@ import { ChapterBottomNav } from "../components/ChapterBottomNav";
 export default function Chapter1() {
   return (
     <div className="prose-hebrew">
-      <h2 className="text-4xl font-bold mb-10 text-center">פרק א' - ילדות</h2>
+      <h2 className="text-4xl font-bold mb-4 text-center">פרק א' - ילדות</h2>
 
       <h3 className="text-2xl font-bold mt-12 mb-6">עליי</h3>
 
