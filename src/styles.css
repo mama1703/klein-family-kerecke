@@ -143,6 +143,10 @@
     color: var(--color-foreground);
   }
 
+  .prose-hebrew h2:first-child {
+    margin-top: 0;
+  }
+
   .prose-hebrew h3 {
     font-family: var(--font-heading);
     font-size: 1.35rem;
