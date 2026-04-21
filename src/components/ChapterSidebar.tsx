@@ -1,7 +1,5 @@
-import { NavLink, useLocation, Link } from "react-router-dom";
-import { useMemo, useState } from "react";
-import { ChevronDown, List } from "lucide-react";
-import { motion, AnimatePresence } from "framer-motion";
+import { NavLink, useLocation, useNavigate } from "react-router-dom";
+import { useMemo } from "react";
 
 export interface Chapter {
   id: string;
@@ -13,9 +11,15 @@ interface ChapterSidebarProps {
   chapters: Chapter[];
 }
 
+const scrollTop = () => {
+  window.scrollTo(0, 0);
+  document.documentElement.scrollTop = 0;
+  document.body.scrollTop = 0;
+};
+
 export function ChapterSidebar({ chapters }: ChapterSidebarProps) {
-  const [mobileOpen, setMobileOpen] = useState(false);
   const location = useLocation();
+  const navigate = useNavigate();
 
   const activeChapter = useMemo(() => {
     const currentPath = location.pathname.replace(/\/$/, "") || "/";
@@ -27,6 +31,11 @@ export function ChapterSidebar({ chapters }: ChapterSidebarProps) {
     );
   }, [chapters, location.pathname]);
 
+  const handleNav = (to: string) => {
+    scrollTop();
+    navigate(to);
+  };
+
   return (
     <>
       {/* Desktop sidebar */}
@@ -36,22 +45,22 @@ export function ChapterSidebar({ chapters }: ChapterSidebarProps) {
             פרקים
           </h3>
           <nav className="space-y-0.5">
-            {chapters.map((ch) => (
-              <NavLink
-                key={ch.id}
-                to={ch.to}
-                end
-                className={({ isActive }) =>
-                  `block px-3 py-2 text-sm rounded-md transition-colors ${
+            {chapters.map((ch) => {
+              const isActive = location.pathname.replace(/\/$/, "") === ch.to.replace(/\/$/, "");
+              return (
+                <button
+                  key={ch.id}
+                  onClick={() => handleNav(ch.to)}
+                  className={`block w-full text-right px-3 py-2 text-sm rounded-md transition-colors ${
                     isActive
                       ? "bg-accent text-foreground font-medium"
                       : "text-muted-foreground hover:text-foreground hover:bg-accent/50"
-                  }`
-                }
-              >
-                {ch.title}
-              </NavLink>
-            ))}
+                  }`}
+                >
+                  {ch.title}
+                </button>
+              );
+            })}
           </nav>
         </div>
       </aside>
@@ -63,17 +72,17 @@ export function ChapterSidebar({ chapters }: ChapterSidebarProps) {
           {chapters.map((ch) => {
             const isActive = location.pathname.replace(/\/$/, "") === ch.to.replace(/\/$/, "");
             return (
-              <Link
+              <button
                 key={ch.id}
-                to={ch.to}
-                className={`rounded-xl border px-3 py-3 text-sm transition-colors leading-snug ${
+                onClick={() => handleNav(ch.to)}
+                className={`rounded-xl border px-3 py-3 text-sm transition-colors leading-snug text-right ${
                   isActive
                     ? "border-primary/40 bg-accent text-foreground font-semibold"
                     : "border-border bg-card text-muted-foreground hover:text-foreground hover:bg-accent/50"
                 }`}
               >
                 {ch.title}
-              </Link>
+              </button>
             );
           })}
         </div>
