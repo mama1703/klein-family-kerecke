@@ -1,4 +1,4 @@
-import { Link, NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
@@ -18,10 +18,7 @@ export function SiteHeader() {
   return (
     <header className="sticky top-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border">
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
-        <div className="flex items-center justify-between h-16">
-          <Link to="/" className="font-heading text-xl font-bold text-foreground hover:text-primary transition-colors">
-            ספר המשפחה
-          </Link>
+        <div className="flex items-center justify-center h-16 relative">
 
           <nav className="hidden md:flex items-center gap-1">
             {navItems.map((item) => (
@@ -44,11 +41,12 @@ export function SiteHeader() {
 
           <button
             onClick={() => setMobileOpen(!mobileOpen)}
-            className="md:hidden p-2 text-muted-foreground hover:text-foreground transition-colors"
+            className="md:hidden absolute left-0 p-2 text-muted-foreground hover:text-foreground transition-colors"
             aria-label="תפריט"
           >
             {mobileOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
+
         </div>
       </div>
 
