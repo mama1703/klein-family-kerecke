@@ -14,7 +14,7 @@ export default function HomePage() {
   return (
     <div>
       <section className="bg-card border-b border-border">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 py-16 sm:py-24 text-center">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 py-10 sm:py-14 text-center">
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -28,21 +28,21 @@ export default function HomePage() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.2, duration: 0.6 }}
-            className="w-16 h-0.5 bg-primary mx-auto mt-6"
+            className="w-16 h-0.5 bg-primary mx-auto mt-4"
           />
 
           <motion.p
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3, duration: 0.6 }}
-            className="mt-6 text-lg sm:text-xl text-muted-foreground leading-relaxed max-w-2xl mx-auto"
+            className="mt-4 text-lg sm:text-xl text-muted-foreground leading-relaxed max-w-2xl mx-auto"
           >
             ספר המשפחה שלנו – סיפורים, זיכרונות ועדויות.
           </motion.p>
         </div>
       </section>
 
-      <section className="max-w-3xl mx-auto px-4 sm:px-6 py-12 text-right leading-relaxed">
+      <section className="max-w-3xl mx-auto px-4 sm:px-6 py-8 text-right leading-relaxed">
         <p className="mb-4">
           באתר זה, תוכלו למצוא את עזבונו של סבי, לצד עדויות וסיפורים של בני המשפחה.
         </p>
@@ -60,10 +60,10 @@ export default function HomePage() {
           שנולדה בשנת 1928 ונפטרה ב-2023, בשיבה טובה, בהיותה בת 94.
         </p>
         <p className="mb-4">ניתן לראות פה את אתר ההנצחה שהוקם לזכרם.</p>
-        <p className="mt-6 font-semibold">יפעת דניאלי</p>
+        <p className="mt-4 font-semibold">יפעת דניאלי</p>
       </section>
 
-      <section className="max-w-5xl mx-auto px-4 sm:px-6 py-4 sm:py-8">
+      <section className="max-w-3xl mx-auto px-4 sm:px-6 pb-8">
         <div className="grid gap-4 md:grid-cols-2">
           <div className="overflow-hidden rounded-2xl border border-border bg-card shadow-sm">
             <img
@@ -72,7 +72,6 @@ export default function HomePage() {
               className="w-full h-auto block"
             />
           </div>
-
           <div className="overflow-hidden rounded-2xl border border-border bg-card shadow-sm">
             <img
               src="/klein-family-kerecke/images/book-side2.jpeg"
@@ -83,7 +82,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="max-w-4xl mx-auto px-4 sm:px-6 py-12 sm:py-16">
+      <section className="max-w-3xl mx-auto px-4 sm:px-6 py-8 sm:py-10">
         <div className="grid gap-4 sm:grid-cols-2">
           {sections.map((section, i) => (
             <motion.div
