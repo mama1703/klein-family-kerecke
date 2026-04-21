@@ -1,4 +1,4 @@
-import { NavLink, useLocation, useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import { useMemo } from "react";
 
 export interface Chapter {
@@ -10,12 +10,6 @@ export interface Chapter {
 interface ChapterSidebarProps {
   chapters: Chapter[];
 }
-
-const scrollTop = () => {
-  window.scrollTo(0, 0);
-  document.documentElement.scrollTop = 0;
-  document.body.scrollTop = 0;
-};
 
 export function ChapterSidebar({ chapters }: ChapterSidebarProps) {
   const location = useLocation();
@@ -32,13 +26,16 @@ export function ChapterSidebar({ chapters }: ChapterSidebarProps) {
   }, [chapters, location.pathname]);
 
   const handleNav = (to: string) => {
-    scrollTop();
     navigate(to);
+    setTimeout(() => {
+      window.scrollTo(0, 0);
+      document.documentElement.scrollTop = 0;
+      document.body.scrollTop = 0;
+    }, 50);
   };
 
   return (
     <>
-      {/* Desktop sidebar */}
       <aside className="hidden lg:block w-64 shrink-0">
         <div className="sticky top-24">
           <h3 className="font-heading text-sm font-semibold text-muted-foreground mb-3">
@@ -65,7 +62,6 @@ export function ChapterSidebar({ chapters }: ChapterSidebarProps) {
         </div>
       </aside>
 
-      {/* Mobile: grid of chapter cards */}
       <div className="lg:hidden mb-6">
         <p className="text-xs font-semibold text-muted-foreground mb-3 px-1">פרקים</p>
         <div className="grid grid-cols-2 gap-2">
