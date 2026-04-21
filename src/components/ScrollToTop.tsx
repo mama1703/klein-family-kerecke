@@ -1,10 +1,18 @@
 import { useState, useEffect } from "react";
+import { useLocation } from "react-router-dom";
 import { ArrowUp } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
 export function ScrollToTop() {
+  const { pathname } = useLocation();
   const [visible, setVisible] = useState(false);
 
+  // גלול למעלה בכל מעבר בין דפים
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "instant" });
+  }, [pathname]);
+
+  // כפתור חזרה למעלה
   useEffect(() => {
     const onScroll = () => setVisible(window.scrollY > 400);
     window.addEventListener("scroll", onScroll, { passive: true });
