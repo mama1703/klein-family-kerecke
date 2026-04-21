@@ -63,7 +63,7 @@ export function AudioPlayer({ src, title }: AudioPlayerProps) {
   };
 
   return (
-    <div className="not-prose mb-10 rounded-2xl border border-stone-200 bg-stone-50 px-4 py-4 shadow-sm">
+    <div className="not-prose mb-4 rounded-2xl border border-stone-200 bg-stone-50 px-4 py-4 shadow-sm">
       <audio ref={audioRef} src={src} preload="metadata" />
 
       <div className="flex items-center gap-3 mb-3">
