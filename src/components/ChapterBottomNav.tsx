@@ -1,12 +1,6 @@
 import { useLocation, useNavigate } from "react-router-dom";
 import { storyHaimChapters } from "../pages/storyHaimChapters";
 
-const scrollTop = () => {
-  window.scrollTo(0, 0);
-  document.documentElement.scrollTop = 0;
-  document.body.scrollTop = 0;
-};
-
 export function ChapterBottomNav() {
   const location = useLocation();
   const navigate = useNavigate();
@@ -23,15 +17,17 @@ export function ChapterBottomNav() {
   const nextChapter = currentIndex < storyHaimChapters.length - 1 ? storyHaimChapters[currentIndex + 1] : null;
 
   const handleNav = (to: string) => {
-    scrollTop();
     navigate(to);
+    setTimeout(() => {
+      window.scrollTo(0, 0);
+      document.documentElement.scrollTop = 0;
+      document.body.scrollTop = 0;
+    }, 50);
   };
 
   return (
     <div className="not-prose mt-16 border-t border-stone-200 pt-6">
       <div className="grid gap-6 sm:grid-cols-2">
-
-        {/* פרק הבא */}
         <div className="text-right">
           {nextChapter && (
             <button onClick={() => handleNav(nextChapter.to)} className="group inline-block text-right">
@@ -44,8 +40,6 @@ export function ChapterBottomNav() {
             </button>
           )}
         </div>
-
-        {/* פרק קודם */}
         <div className="text-left">
           {prevChapter && (
             <button onClick={() => handleNav(prevChapter.to)} className="group inline-block text-left">
@@ -58,7 +52,6 @@ export function ChapterBottomNav() {
             </button>
           )}
         </div>
-
       </div>
     </div>
   );
