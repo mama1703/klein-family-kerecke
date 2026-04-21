@@ -4,7 +4,7 @@ import { AudioPlayer } from "../components/AudioPlayer";
 export default function StoryHaimIndex() {
   return (
     <div className="prose-hebrew">
-      <h2 className="text-4xl font-bold mb-10 text-center">הקדמה</h2>
+      <h2 className="text-4xl font-bold mb-4 text-center">הקדמה</h2>
 
       <AudioPlayer
         src="/klein-family-kerecke/audio/haim-hakdama.mp3"
