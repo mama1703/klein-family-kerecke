@@ -1,4 +1,5 @@
 import { PageHeader } from "../components/PageHeader";
+import { StoryNav } from "../components/StoryNav";
 import { ImageBlock } from "../components/ImageBlock";
 
 export default function StoryHadva() {
@@ -1050,6 +1051,10 @@ export default function StoryHadva() {
             כעם וכך נקיים את נדרם של יקירנו לחזור לארץ האבות ולחיות בה בשלום
             ובשלווה.
           </p>
+        <StoryNav
+          prev={{ to: "/story-hershi", title: "הסיפור של הרשי", icon: "book" }}
+          next={{ to: "/story-avi", title: "הסיפור של אווי", icon: "film" }}
+        />
         </div>
       </div>
     </div>
