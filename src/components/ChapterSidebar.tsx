@@ -38,12 +38,12 @@ export function ChapterSidebar({ chapters }: ChapterSidebarProps) {
     <>
       <aside className="hidden lg:block w-64 shrink-0">
         <div className="sticky top-24">
-          <h3 className="font-heading text-sm font-semibold text-muted-foreground mb-3">
-            פרקים
-          </h3>
+          {/* "פרקים" label removed — content aligns with first chapter item */}
           <nav className="space-y-0.5">
             {chapters.map((ch) => {
-              const isActive = location.pathname.replace(/\/$/, "") === ch.to.replace(/\/$/, "");
+              const isActive =
+                location.pathname.replace(/\/$/, "") ===
+                ch.to.replace(/\/$/, "");
               return (
                 <button
                   key={ch.id}
@@ -66,7 +66,9 @@ export function ChapterSidebar({ chapters }: ChapterSidebarProps) {
         <p className="text-xs font-semibold text-muted-foreground mb-3 px-1">פרקים</p>
         <div className="grid grid-cols-2 gap-2">
           {chapters.map((ch) => {
-            const isActive = location.pathname.replace(/\/$/, "") === ch.to.replace(/\/$/, "");
+            const isActive =
+              location.pathname.replace(/\/$/, "") ===
+              ch.to.replace(/\/$/, "");
             return (
               <button
                 key={ch.id}
