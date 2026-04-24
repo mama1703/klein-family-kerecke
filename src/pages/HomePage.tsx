@@ -1,3 +1,6 @@
+הנה הקוד המלא המעודכן:
+
+```jsx
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { BookOpen, Film, FileText } from "lucide-react";
@@ -13,6 +16,15 @@ const sections = [
 export default function HomePage() {
   return (
     <div>
+      {/* Banner */}
+      <div className="w-full">
+        <img
+          src="/klein-family-kerecke/images/website_banner_1920x750.png"
+          alt="קרצקי – קהילה חרבה"
+          className="w-full block max-h-[220px] sm:max-h-none object-cover object-center"
+        />
+      </div>
+
       <section className="bg-card border-b border-border">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 py-7 sm:py-10 text-center">
           <motion.h1
@@ -116,3 +128,6 @@ export default function HomePage() {
     </div>
   );
 }
+```
+
+השינוי היחיד מהקוד המקורי שלך הוא הוספת ה-`div` עם הבאנר בראש הדף.
