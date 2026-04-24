@@ -16,7 +16,7 @@ export default function HomePage() {
       {/* Banner */}
       <div className="w-full">
         <img
-          src="/klein-family-kerecke/images/website_banner_1920x750.png"
+          src="/klein-family-kerecke/images/home-banner-1680x220.png"
           alt="קרצקי – קהילה חרבה"
           className="w-full block"
         />
