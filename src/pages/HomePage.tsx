@@ -18,7 +18,7 @@ export default function HomePage() {
         <img
           src="/klein-family-kerecke/images/website_banner_1920x750.png"
           alt="קרצקי – קהילה חרבה"
-          className="w-full block max-h-[220px] sm:max-h-[300px] lg:max-h-[250px] object-cover object-center"
+          className="w-full block max-h-[220px] sm:max-h-[300px] lg:max-h-[250px] object-cover object-bottom"
         />
       </div>
 
