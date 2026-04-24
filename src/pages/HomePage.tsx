@@ -1,6 +1,3 @@
-הנה הקוד המלא המעודכן:
-
-```jsx
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { BookOpen, Film, FileText } from "lucide-react";
@@ -128,6 +125,3 @@ export default function HomePage() {
     </div>
   );
 }
-```
-
-השינוי היחיד מהקוד המקורי שלך הוא הוספת ה-`div` עם הבאנר בראש הדף.
