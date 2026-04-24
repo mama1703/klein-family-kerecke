@@ -54,42 +54,59 @@
 
 :root {
   --radius: 0.5rem;
-  --background: oklch(0.975 0.005 80);
-  --foreground: oklch(0.22 0.02 50);
-  --card: oklch(0.985 0.004 80);
-  --card-foreground: oklch(0.22 0.02 50);
-  --popover: oklch(0.985 0.004 80);
-  --popover-foreground: oklch(0.22 0.02 50);
-  --primary: oklch(0.45 0.06 50);
-  --primary-foreground: oklch(0.98 0.004 80);
-  --secondary: oklch(0.94 0.01 80);
-  --secondary-foreground: oklch(0.35 0.03 50);
-  --muted: oklch(0.95 0.008 80);
-  --muted-foreground: oklch(0.5 0.03 50);
-  --accent: oklch(0.92 0.015 80);
-  --accent-foreground: oklch(0.3 0.04 50);
+
+  /* רקע בז' חמים */
+  --background: #e8dcc8;
+  --foreground: #2c1a0e;
+
+  /* כרטיסיות — בז' מעט בהיר יותר מהרקע */
+  --card: #efe5d0;
+  --card-foreground: #2c1a0e;
+
+  --popover: #efe5d0;
+  --popover-foreground: #2c1a0e;
+
+  /* primary — חום זהוב לקו ולהדגשות */
+  --primary: #8B6914;
+  --primary-foreground: #fdf8f0;
+
+  --secondary: #ddd0b8;
+  --secondary-foreground: #3d2b1f;
+
+  --muted: #ddd0b8;
+  --muted-foreground: #7a5c3f;
+
+  --accent: #d9ccb4;
+  --accent-foreground: #3d2b1f;
+
   --destructive: oklch(0.577 0.245 27.325);
   --destructive-foreground: oklch(0.984 0.003 247.858);
-  --border: oklch(0.9 0.015 75);
-  --input: oklch(0.92 0.012 75);
-  --ring: oklch(0.55 0.05 50);
-  --warm: oklch(0.88 0.03 70);
-  --warm-foreground: oklch(0.35 0.04 50);
-  --chapter: oklch(0.96 0.01 70);
-  --chapter-foreground: oklch(0.4 0.04 50);
+
+  --border: #c8b89a;
+  --input: #d9ccb4;
+  --ring: #8B6914;
+
+  --warm: #d4c4a0;
+  --warm-foreground: #3d2b1f;
+
+  --chapter: #ece0ca;
+  --chapter-foreground: #3d2b1f;
+
   --chart-1: oklch(0.646 0.222 41.116);
   --chart-2: oklch(0.6 0.118 184.704);
   --chart-3: oklch(0.398 0.07 227.392);
   --chart-4: oklch(0.828 0.189 84.429);
   --chart-5: oklch(0.769 0.188 70.08);
-  --sidebar: oklch(0.97 0.006 80);
-  --sidebar-foreground: oklch(0.22 0.02 50);
-  --sidebar-primary: oklch(0.45 0.06 50);
-  --sidebar-primary-foreground: oklch(0.98 0.004 80);
-  --sidebar-accent: oklch(0.94 0.012 75);
-  --sidebar-accent-foreground: oklch(0.3 0.04 50);
-  --sidebar-border: oklch(0.9 0.015 75);
-  --sidebar-ring: oklch(0.55 0.05 50);
+
+  --sidebar: #e8dcc8;
+  --sidebar-foreground: #2c1a0e;
+  --sidebar-primary: #8B6914;
+  --sidebar-primary-foreground: #fdf8f0;
+  --sidebar-accent: #d9ccb4;
+  --sidebar-accent-foreground: #3d2b1f;
+  --sidebar-border: #c8b89a;
+  --sidebar-ring: #8B6914;
+
   --font-heading: "Frank Ruhl Libre", serif;
   --font-body: "Heebo", sans-serif;
 }
