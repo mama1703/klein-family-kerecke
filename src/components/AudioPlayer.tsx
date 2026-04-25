@@ -116,7 +116,7 @@ export function AudioPlayer({ src, title }: AudioPlayerProps) {
             dir="rtl"
           >
             <div
-              className="absolute right-0 top-0 h-full rounded-full bg-[#8B6914] transition-all"
+              className="absolute right-0 top-0 h-full rounded-full bg-[#5a3a1a]] transition-all"
               style={{ width: `${progress}%` }}
             />
           </div>
