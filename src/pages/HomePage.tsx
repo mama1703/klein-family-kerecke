@@ -15,11 +15,17 @@ export default function HomePage() {
     <div>
       {/* Banner */}
       <div className="w-full">
-        <img
-          src="/klein-family-kerecke/images/home-banner-1680x220.png"
-          alt="קרצקי – קהילה חרבה"
-          className="w-full block"
-        />
+        <picture>
+          <source
+            media="(min-width: 640px)"
+            srcSet="/klein-family-kerecke/images/home-banner-1680x220.png"
+          />
+          <img
+            src="/klein-family-kerecke/images/homepage-mobile-625x350.png"
+            alt="קרצקי – קהילה חרבה"
+            className="w-full block"
+          />
+        </picture>
       </div>
 
       <section className="bg-card border-b border-border">
