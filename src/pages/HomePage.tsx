@@ -18,7 +18,7 @@ export default function HomePage() {
         <picture>
           <source
             media="(min-width: 640px)"
-            srcSet="/klein-family-kerecke/images/home-banner-1680x220.png"
+            srcSet="/klein-family-kerecke/images/home-page-banner-1920x250.png"
           />
           <img
             src="/klein-family-kerecke/images/homepage-mobile-625x350.png"
