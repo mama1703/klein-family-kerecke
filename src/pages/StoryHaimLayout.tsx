@@ -6,6 +6,21 @@ import { storyHaimChapters } from "./storyHaimChapters";
 export default function StoryHaimLayout() {
   return (
     <div>
+      {/* Banner */}
+      <div className="w-full">
+        <picture>
+          <source
+            media="(min-width: 640px)"
+            srcSet="/klein-family-kerecke/images/haim-banner-1920x250.png"
+          />
+          <img
+            src="/klein-family-kerecke/images/haim-mobile-625x350.png"
+            alt="הסיפור של חיים"
+            className="w-full block"
+          />
+        </picture>
+      </div>
+
       <PageHeader
         title="הסיפור של חיים"
         subtitle="ילדות עד הגעה לארץ ישראל"
